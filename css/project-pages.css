@@ -1,0 +1,119 @@
+/* Individual Project Pages */
+.project-detail {
+  padding-top: 120px;
+  padding-bottom: 4rem;
+}
+
+/* Project Title */
+.project-name {
+  font-family: var(--font-montserrat);
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Description */
+.project-description {
+  font-family: var(--font-opensans);
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text-main);
+}
+
+.project-meta {
+  font-family: var(--font-opensans);
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 17px;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--text-main);
+}
+
+.project-meta p {
+  font-family: var(--font-opensans);
+  margin-bottom: 1rem;
+}
+
+/* Project Gallery */
+.project-gallery-title {
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.project-gallery img:first-child {
+  grid-column: 1 / -1;
+}
+
+/* Image styling */
+.project-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.project-gallery img:hover {
+  transform: scale(1.02);
+}
+
+/* Links and Buttons */
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-view {
+  padding: 0.8rem 2rem;
+  border: 2px solid var(--text-main);
+  border-radius: 6px;
+  font-family: var(--font-lato);
+  font-weight: 700;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn-view:hover {
+  background-color: var(--text-main);
+  color: var(--bg-card);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-name {
+    font-size: 30px;
+  }
+
+  .project-description,
+  .project-meta {
+    font-size: 16px;
+  }
+
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .project-gallery img {
+    width: 100%;
+    height: 100%;
+  }
+}
