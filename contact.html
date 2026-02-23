@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Optimization -->
+    <title>Contact | Karl Guiao</title>
+    <meta
+      name="description"
+      content="Get in touch with Karl Guiao for collaborations, opportunities, or inquiries. Reach out via email, phone, or social media."
+    />
+    <meta name="author" content="Karl Guiao" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Contact | Karl Guiao" />
+    <meta
+      property="og:description"
+      content="Get in touch with Karl Guiao for collaborations, opportunities, or inquiries. Reach out via email, phone, or social media."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://karlguiao.github.io/portfolio/contact.html"
+    />
+    <meta
+      property="og:image"
+      content="https://karlguiao.github.io/portfolio/assets/kg-logo.png"
+    />
+
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-96.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <link rel="icon" sizes="192x192" href="assets/android-chrome-192.png" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <a href="index.html"
+          ><img src="assets/kg-logo.png" alt="Karl Guiao Logo"
+        /></a>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+
+      <!-- Dark/Light Mode Switch -->
+      <div class="mode-switch">
+        <div class="mode-indicator">
+          <img src="assets/sun-icon.svg" class="icon sun" alt="Sun" />
+          <img src="assets/moon-icon.svg" class="icon moon" alt="Moon" />
+        </div>
+      </div>
+
+      <div class="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </header>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <main class="container">
+      <section class="contact-section">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="contact-grid">
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper">
+            <h3 class="info-title">Send me a Message</h3>
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="user_name"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="user_email"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone">Contact Number:</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="user_phone"
+                  placeholder="Enter your number"
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Type your message..."
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="btn-submit"
+                onclick="sendMail(event)"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <h3 class="info-title">Get in Touch</h3>
+            <p class="info-desc">
+              feel free to reach me out for collaborations, opportunities, or
+              inquiries.
+            </p>
+
+            <div class="info-item">
+              <img src="assets/email-icon.svg" alt="Email" class="info-icon" />
+              <a href="mailto:karlguiao17@gmail.com">karlguiao17@gmail.com</a>
+            </div>
+            <div class="info-item">
+              <img src="assets/phone-icon.svg" alt="Phone" class="info-icon" />
+              <a href="tel:+639939240199">+63 993 924 0199</a>
+            </div>
+
+            <p class="info-desc">Other places to find me:</p>
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/karlguiao143"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="assets/fb-icon.svg" alt="Facebook" />
+              </a>
+              <a
+                href="https://github.com/karlguiao"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="assets/github-icon.svg" alt="Github" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/karl-guiao/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="assets/linkedin-icon.svg" alt="LinkedIn" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="social-icons">
+          <a href="https://github.com/karlguiao"
+            ><img src="assets/github-icon.svg" alt="Github"
+          /></a>
+          <a href="https://www.facebook.com/karlguiao143"
+            ><img src="assets/fb-icon.svg" alt="Facebook"
+          /></a>
+          <a href="https://www.linkedin.com/in/karl-guiao/"
+            ><img src="assets/linkedin-icon.svg" alt="LinkedIn"
+          /></a>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="resume.html">Resume</a>
+          <a href="blogs.html">Blogs</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <p>Copyright © 2025 designed and developed by Karl Guiao</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init({
+          publicKey: "kKTVMFdVz9FQid_A4",
+        });
+      })();
+    </script>
+    <script src="scripts/common.js"></script>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+      <span id="toast-message"></span>
+    </div>
+  </body>
+</html>
