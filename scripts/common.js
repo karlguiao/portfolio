@@ -124,3 +124,92 @@ function showToast(message, type) {
     toast.className = "toast";
   }, 3000);
 }
+
+// Background Animation
+document.addEventListener("DOMContentLoaded", () => {
+  const canvas = document.getElementById("aquarium-bg");
+  const ctx = canvas.getContext("2d");
+
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener("resize", resize);
+
+  function isDarkMode() {
+    return document.documentElement.getAttribute("data-theme") === "dark";
+  }
+
+  class Star {
+    constructor() {
+      this.reset();
+    }
+    reset() {
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.radius = Math.random() * 1.5 + 0.5;
+      this.alpha = Math.random() * 0.5 + 0.4;
+      this.speed = Math.random() * 0.1 + 0.05;
+    }
+    update() {
+      this.y -= this.speed;
+      if (this.y < 0) this.reset();
+    }
+    draw() {
+      ctx.save();
+      ctx.globalAlpha = this.alpha;
+      ctx.shadowBlur = 8;
+      ctx.shadowColor = this.getColor();
+      ctx.fillStyle = this.getColor();
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    }
+    getColor() {
+      return isDarkMode() ? "#27455a" : "#ffffff";
+    }
+  }
+
+  const stars = Array.from({ length: 150 }, () => new Star());
+
+  function drawNebula() {
+    const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+    if (isDarkMode()) {
+      gradient.addColorStop(0, "rgba(10,30,50,0.9)");
+      gradient.addColorStop(0.5, "rgba(20,40,60,0.6)");
+      gradient.addColorStop(1, "rgba(0,0,20,1)");
+    } else {
+      gradient.addColorStop(0, "rgba(255,255,255,0.2)");
+      gradient.addColorStop(0.5, "rgba(63,101,130,0.1)");
+      gradient.addColorStop(1, "rgba(255,255,255,0.05)");
+    }
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  }
+
+  function animate() {
+    ctx.fillStyle = isDarkMode()
+      ? "rgba(0,0,0,0.15)"
+      : "rgba(255,255,255,0.05)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    drawNebula();
+    stars.forEach((s) => {
+      s.update();
+      s.draw();
+    });
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  // Observe theme changes
+  const observer = new MutationObserver(() => animate());
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["data-theme"],
+  });
+});
