@@ -5,28 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO Optimization -->
-    <title>Charlie's Salon | Karl Guiao</title>
+    <title>Blogs | Karl Guiao</title>
     <meta
       name="description"
-      content="Charlie's Salon website by Karl Guiao — a responsive business website for a local salon in Angeles City, Pampanga showcasing services and professional UI."
+      content="Explore the latest web development and design blogs by Karl Guiao, covering projects, UI/UX principles, and essential web design tips for developers."
     />
     <meta name="author" content="Karl Guiao" />
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph / Social Sharing -->
-    <meta property="og:title" content="Charlie's Salon | Karl Guiao" />
+    <meta property="og:title" content="Blogs | Karl Guiao" />
     <meta
       property="og:description"
-      content="Charlie's Salon website by Karl Guiao — a responsive business website for a local salon in Angeles City, Pampanga showcasing services and professional UI."
+      content="Explore the latest web development and design blogs by Karl Guiao, covering projects, UI/UX principles, and essential web design tips for developers."
     />
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content="https://karlguiao.github.io/portfolio/charlie-salon.html"
+      content="https://karlguiao.github.io/portfolio/blogs.html"
     />
     <meta
       property="og:image"
-      content="https://karlguiao.github.io/portfolio/assets/charlie-home.jpg"
+      content="https://karlguiao.github.io/portfolio/assets/web-fox-esports-project-blog.png"
     />
 
     <!-- Fonts & Styles -->
@@ -37,7 +37,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/project-pages.css" />
+    <link rel="stylesheet" href="css/blogs.css" />
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="assets/favicon.ico" />
@@ -66,9 +66,9 @@
       <nav class="nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="projects.html" class="active">Projects</a>
+        <a href="projects.html">Projects</a>
         <a href="resume.html">Resume</a>
-        <a href="blogs.html">Blogs</a>
+        <a href="blogs.html" class="active">Blogs</a>
         <a href="contact.html">Contact</a>
       </nav>
 
@@ -101,63 +101,159 @@
     <canvas id="aquarium-bg"></canvas>
 
     <!-- Main Content -->
-    <main class="container project-detail">
-      <h1 class="project-name">
-        Charlie's Salon - Barber & Hair Styling Website
-      </h1>
+    <main class="container">
+      <!-- Featured Blog -->
+      <section class="featured-blog">
+        <div class="featured-content">
+          <h1 class="featured-label">FEATURED</h1>
 
-      <p class="project-description">
-        Charlie's Salon is a responsive business website developed for a local
-        small-scale salon in Angeles City, Pampanga. The purpose of this project
-        is to provide the business with a professional online presence that
-        showcases its services, builds credibility, and improves accessibility
-        beyond social media platforms.
-      </p>
+          <h2 class="featured-title">
+            Web Fox Esports: How I Built My First Website as a BSIT Student
+          </h2>
+          <p class="blog-meta">Date: February 10, 2025 | Categories: Project</p>
 
-      <div class="project-meta">
-        <p>
-          <strong>Features:</strong> Responsive layout, service sections, clean
-          UI design, structured content presentation.
-        </p>
+          <div class="featured-img-wrapper">
+            <img
+              src="assets/web-fox-esports-project-blog.png"
+              alt="Web Fox Esports Project"
+              class="featured-img"
+            />
+          </div>
 
-        <p>
-          <strong>Technologies Used:</strong> HTML, CSS, JavaScript, GitHub
-          Pages.
-        </p>
+          <p class="featured-desc">
+            Web Fox Esports is the first website I developed as a BSIT student.
+            While the structure followed academic requirements, I personalized
+            the design with a bright white and orange esports theme inspired by
+            my passion for competitive gaming. This project marked the beginning
+            of my journey in front-end development, where I learned the
+            importance of clean HTML structure, consistent CSS styling, and
+            intentional design decisions that enhance user experience.
+          </p>
+
+          <a href="wfe-project-blog.html" class="btn-read-more">Read More</a>
+        </div>
+      </section>
+
+      <div class="blogs-layout">
+        <!-- Recent Blogs -->
+        <section class="recent-blogs">
+          <h2 class="section-title">RECENT BLOGS</h2>
+          <div class="divider"></div>
+          <p class="section-desc">
+            Take a look at the recent blog posts by Karl Guiao
+          </p>
+
+          <div class="blog-grid">
+            <!-- Blog 1 -->
+            <div class="blog-card">
+              <div class="blog-img-wrapper">
+                <img
+                  src="assets/10-commandments-of-web-design-blog.jpg"
+                  alt="The 10 Commandments of Web Design"
+                  class="blog-img"
+                />
+              </div>
+              <div class="blog-info">
+                <h3 class="blog-title">
+                  The 10 Commandments of Web Design Every Developer Should
+                  Follow
+                </h3>
+                <p class="blog-meta">
+                  Date: February 11, 2025 | Categories: Web Design
+                </p>
+                <p class="blog-excerpt">
+                  Great websites are not built by accident—they follow
+                  principles. In this article, I break down the 10 essential
+                  commandments of web design, covering usability,
+                  responsiveness, performance, accessibility, and clean code.
+                  These guiding rules help transform simple layouts into
+                  meaningful and user-focused digital experiences.
+                </p>
+                <a href="ten-web-design-blog.html" class="btn-read-more-small">
+                  Read More
+                </a>
+              </div>
+            </div>
+
+            <!-- Blog 2 -->
+            <div class="blog-card">
+              <div class="blog-img-wrapper">
+                <img
+                  src="assets/journey-as-developer-blog.jpg"
+                  alt="My Journey as a Web Developer"
+                  class="blog-img"
+                />
+              </div>
+              <div class="blog-info">
+                <h3 class="blog-title">
+                  My Journey as a Web Developer: From Beginner to Builder
+                </h3>
+                <p class="blog-meta">
+                  Date: February 12, 2025 | Categories: Web Development
+                </p>
+                <p class="blog-excerpt">
+                  My journey in web development started with simple HTML and CSS
+                  exercises guided by my professor. What began as structured
+                  classroom activities eventually became a passion for building
+                  visually engaging and user-focused websites. In this article,
+                  I share how I transitioned from following instructions to
+                  confidently creating projects that reflect my own style and
+                  creativity.
+                </p>
+                <a href="#" class="btn-read-more-small">Read More</a>
+              </div>
+            </div>
+
+            <!-- Blog 3 -->
+            <div class="blog-card">
+              <div class="blog-img-wrapper">
+                <img
+                  src="assets/essetial-uiux-principles-blog.jpg"
+                  alt="Essential UI/UX Principles for Beginners"
+                  class="blog-img"
+                />
+              </div>
+              <div class="blog-info">
+                <h3 class="blog-title">
+                  Essential UI/UX Principles Every Beginner Should Know
+                </h3>
+                <p class="blog-meta">
+                  Date: February 15, 2025 | Categories: Web Design
+                </p>
+                <p class="blog-excerpt">
+                  Great websites are not only about clean code—they are about
+                  user experience. This article explores fundamental UI/UX
+                  principles such as visual hierarchy, readability, color
+                  balance, and intuitive navigation. These core concepts helped
+                  me improve both the appearance and usability of my projects.
+                </p>
+                <a href="#" class="btn-read-more-small">Read More</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <div class="sidebar-widget">
+            <h3 class="widget-title">CATEGORIES</h3>
+            <ul class="widget-list">
+              <li><a href="#">Web Development</a></li>
+              <li><a href="#">Web Design</a></li>
+              <li><a href="#">Projects</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3 class="widget-title">ARCHIVES</h3>
+            <ul class="widget-list">
+              <li><a href="#">January 2025</a></li>
+              <li><a href="#">February 2025</a></li>
+              <li><a href="#">March 2025</a></li>
+            </ul>
+          </div>
+        </aside>
       </div>
-
-      <!-- Screenshots -->
-      <h2 class="project-gallery-title">Project Screenshots</h2>
-      <section class="project-gallery">
-        <img src="assets/charlie-home.jpg" alt="Charlie Salon Homepage" />
-        <img
-          src="assets/charlie-services.jpg"
-          alt="Charlie Salon Services Section"
-        />
-        <img
-          src="assets/charlie-contact.jpg"
-          alt="Charlie Salon Contact Section"
-        />
-      </section>
-
-      <!-- Links -->
-      <section class="project-links">
-        <a
-          href="https://karlguiao.github.io/Charlie-Salon/"
-          target="_blank"
-          class="btn-view"
-        >
-          Live Demo
-        </a>
-
-        <a
-          href="https://github.com/karlguiao/Charlie-Salon"
-          target="_blank"
-          class="btn-view"
-        >
-          GitHub Repository
-        </a>
-      </section>
     </main>
 
     <!-- Footer -->
