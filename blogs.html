@@ -145,7 +145,11 @@
 
           <div class="blog-grid">
             <!-- Blog 1 -->
-            <div class="blog-card">
+            <div
+              class="blog-card"
+              data-category="web-design"
+              data-date="2025-02"
+            >
               <div class="blog-img-wrapper">
                 <img
                   src="assets/10-commandments-of-web-design-blog.jpg"
@@ -176,7 +180,11 @@
             </div>
 
             <!-- Blog 2 -->
-            <div class="blog-card">
+            <div
+              class="blog-card"
+              data-category="web-development"
+              data-date="2025-02"
+            >
               <div class="blog-img-wrapper">
                 <img
                   src="assets/journey-as-developer-blog.jpg"
@@ -200,12 +208,20 @@
                   confidently creating projects that reflect my own style and
                   creativity.
                 </p>
-                <a href="#" class="btn-read-more-small">Read More</a>
+                <a
+                  href="journey-web-developer-blog.html"
+                  class="btn-read-more-small"
+                  >Read More</a
+                >
               </div>
             </div>
 
             <!-- Blog 3 -->
-            <div class="blog-card">
+            <div
+              class="blog-card"
+              data-category="web-design"
+              data-date="2025-02"
+            >
               <div class="blog-img-wrapper">
                 <img
                   src="assets/essetial-uiux-principles-blog.jpg"
@@ -227,7 +243,11 @@
                   balance, and intuitive navigation. These core concepts helped
                   me improve both the appearance and usability of my projects.
                 </p>
-                <a href="#" class="btn-read-more-small">Read More</a>
+                <a
+                  href="essential-uiux-principles-blog.html"
+                  class="btn-read-more-small"
+                  >Read More</a
+                >
               </div>
             </div>
           </div>
@@ -238,18 +258,20 @@
           <div class="sidebar-widget">
             <h3 class="widget-title">CATEGORIES</h3>
             <ul class="widget-list">
-              <li><a href="#">Web Development</a></li>
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">Projects</a></li>
+              <li>
+                <a href="#" data-category="web-development">Web Development</a>
+              </li>
+              <li><a href="#" data-category="web-design">Web Design</a></li>
+              <li><a href="#" data-category="projects">Projects</a></li>
             </ul>
           </div>
 
           <div class="sidebar-widget">
             <h3 class="widget-title">ARCHIVES</h3>
             <ul class="widget-list">
-              <li><a href="#">January 2025</a></li>
-              <li><a href="#">February 2025</a></li>
-              <li><a href="#">March 2025</a></li>
+              <li><a href="#" data-date="2025-01">January 2025</a></li>
+              <li><a href="#" data-date="2025-02">February 2025</a></li>
+              <li><a href="#" data-date="2025-03">March 2025</a></li>
             </ul>
           </div>
         </aside>
