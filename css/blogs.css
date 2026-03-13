@@ -69,6 +69,7 @@
   padding-bottom: 1rem;
   object-fit: cover;
   object-position: center;
+  border-radius: 50px;
 }
 
 /* Blogs Layout */
@@ -219,6 +220,12 @@
 }
 
 .widget-list a:hover {
+  text-decoration: underline;
+}
+
+.widget-list a.active-filter {
+  color: var(--text-main);
+  font-weight: 700;
   text-decoration: underline;
 }
 
