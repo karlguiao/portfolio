@@ -79,6 +79,72 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Blogs Category and Date Filtering
+const blogCards = document.querySelectorAll(".blog-card");
+const categoryLinks = document.querySelectorAll("[data-category]");
+const archiveLinks = document.querySelectorAll("[data-date]");
+
+function removeActiveClass(links) {
+  links.forEach((link) => link.classList.remove("active-filter"));
+}
+
+function showAllBlogs() {
+  blogCards.forEach((card) => (card.style.display = "block"));
+}
+// Category Filter
+categoryLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const category = link.dataset.category;
+
+    if (link.classList.contains("active-filter")) {
+      removeActiveClass(categoryLinks);
+      showAllBlogs();
+    } else {
+      removeActiveClass(categoryLinks);
+      link.classList.add("active-filter");
+      blogCards.forEach((card) => {
+        card.style.display =
+          card.dataset.category === category ? "block" : "none";
+      });
+    }
+
+    removeActiveClass(archiveLinks);
+  });
+});
+// Archive Filter
+archiveLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const date = link.dataset.date;
+
+    if (link.classList.contains("active-filter")) {
+      removeActiveClass(archiveLinks);
+      showAllBlogs();
+    } else {
+      removeActiveClass(archiveLinks);
+      link.classList.add("active-filter");
+
+      blogCards.forEach((card) => {
+        card.style.display = card.dataset.date === date ? "block" : "none";
+      });
+    }
+
+    removeActiveClass(categoryLinks);
+  });
+});
+// Blog Card Buttons
+blogCards.forEach((card) => {
+  const button = card.querySelector(".btn-read-more-small");
+  if (button) {
+    button.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+  }
+});
+
 // Form Submission
 function sendMail(event) {
   event.preventDefault();
